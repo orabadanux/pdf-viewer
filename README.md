@@ -8,8 +8,6 @@ A simple and interactive PDF Viewer built using React, React-PDF-Viewer, and Tai
 - **Download Option:** Download the PDF file with a single click.
 - **Responsive Styling:** Styled with Tailwind CSS for a clean and responsive design.
 
----
-
 ## Installation
 
 1. Clone the repository:
@@ -70,9 +68,9 @@ To display a PDF file:
 ## Dependencies
 
 The project uses the following libraries:
-- @react-pdf-viewer/core: Core library for rendering PDFs in React.
-- @react-pdf-viewer/page-navigation: Plugin for pagination controls.
-- @react-pdf-viewer/theme: Theme plugin for a modern dark mode.
-- react-icons: Provides scalable vector icons.
-- framer-motion: Adds animations for a smoother user experience.
-- Tailwind CSS: Utility-first CSS framework for responsive and modern styling.
+- **@react-pdf-viewer/core**: Core library for rendering PDFs in React.
+- **@react-pdf-viewer/page-navigation**: Plugin for pagination controls.
+- **@react-pdf-viewer/theme**: Theme plugin for a modern dark mode.
+- **react-icons**: Provides scalable vector icons.
+- **framer-motion**: Adds animations for a smoother user experience.
+- **Tailwind CSS**: Utility-first CSS framework for responsive and modern styling.
