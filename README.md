@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# PDF Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and interactive PDF Viewer built using React, React-PDF-Viewer, and Tailwind CSS. This PDF viewer allows you to open, view, and interact with PDFs directly on your website. Key features include:
 
-## Available Scripts
+- **Open PDFs:** Embed and view PDF files directly in the browser.
+- **Zoom Controls:** Easily zoom in and out of the document.
+- **Pagination:** Navigate through the pages with intuitive controls.
+- **Download Option:** Download the PDF file with a single click.
+- **Responsive Styling:** Styled with Tailwind CSS for a clean and responsive design.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+   git clone https://github.com/your-username/pdf-viewer.git
+   cd pdf-viewer
+```
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+   npm install
+```
 
-### `npm run build`
+3. Start the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+   npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open your browser and navigate to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+   http://localhost:3000
+```
+## Usage
 
-### `npm run eject`
+### File Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```plaintext
+src/
+├── App.js           # Main application component
+├── PdfViewer.js     # PDF Viewer component
+├── index.css        # Tailwind CSS imports
+├── App.css          # Additional styles
+├── assets/          # Place your PDF and image assets here
+└── ...
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Adding a PDF
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To display a PDF file:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Place your PDF in the public/ folder.
+2. Update the pdfFile property in App.js with the relative path to the PDF file:
+```javascript
+    const samplePDF = process.env.PUBLIC_URL + "/sample.pdf";
+```
 
-## Learn More
+### Customizing Viewer Properties
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **PDF File:** Pass the PDF file URL as a prop to the PdfViewer component.
+- **Zoom Levels:** Modify the zoomSteps array in PdfViewer.js to define custom zoom levels.
+- **Pagination:** The pageNavigationPlugin enables smooth page navigation.
+- **Styling:** Tailwind CSS provides an easy way to customize the design with utility classes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The project uses the following libraries:
+- @react-pdf-viewer/core: Core library for rendering PDFs in React.
+- @react-pdf-viewer/page-navigation: Plugin for pagination controls.
+- @react-pdf-viewer/theme: Theme plugin for a modern dark mode.
+- react-icons: Provides scalable vector icons.
+- framer-motion: Adds animations for a smoother user experience.
+- Tailwind CSS: Utility-first CSS framework for responsive and modern styling.
